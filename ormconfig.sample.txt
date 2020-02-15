@@ -1,0 +1,23 @@
+For production usage with docker
+{
+  "type": "postgres",
+  "host": "postgis",
+  "port": 5432,
+  "username": "root",
+  "password": "root",
+  "database": "test",
+  "entities": ["dist/**/*.entity{.ts,.js}"],
+  "synchronize": true
+}
+
+For running the tests
+{
+  "type": "postgres",
+  "host": "0.0.0.0",
+  "port": 25432,
+  "username": "root",
+  "password": "root",
+  "database": "test",
+  "entities": ["dist/**/*.entity{.ts,.js}"],
+  "synchronize": true
+}

@@ -1,0 +1,26 @@
+version: "3"
+services:
+  app:
+    build: .
+    depends_on:
+      - postgis
+    links:
+      - postgis
+    environment:
+      PORT: 3000
+    ports:
+      - "3000:3000"
+    command: npm run start
+    volumes:
+      - .:/app/
+      - /app/node_modules
+
+  postgis:
+    image: kartoza/postgis
+    ports:
+      - "25432:5432"
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASS: root
+      POSTGRES_DBNAME: test
+      ALLOW_IP_RANGE: '0.0.0.0/0'
