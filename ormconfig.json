@@ -1,7 +1,7 @@
 {
   "type": "postgres",
-  "host": "0.0.0.0",
-  "port": 25432,
+  "host": "postgis",
+  "port": 5432,
   "username": "root",
   "password": "root",
   "database": "test",
